@@ -1,0 +1,106 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# DotEnv configuration
+.env
+
+# Database
+*.db
+*.rdb
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/
+
+# Spyder
+.spyproject/
+
+# Jupyter NB Checkpoints
+.ipynb_checkpoints/
+.pytest_cache/
+
+
+# Mac OS-specific storage files
+.DS_Store
+
+
+# dependencies
+react-grpc/node_modules
+react-grpc/.pnp
+react-grpc/.pnp.js
+
+# testing
+react-grpc/coverage
+
+# production
+react-grpc/build/
+
+# misc
+react-grpc/.DS_Store
+react-grpc/.env.local
+react-grpc/.env.development.local
+react-grpc/.env.test.local
+react-grpc/.env.production.local
+
+react-grpc/npm-debug.log*
+react-grpc/yarn-debug.log*
+react-grpc/yarn-error.log*
+
+react-grpc/package-lock.json
