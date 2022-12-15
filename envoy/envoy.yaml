@@ -23,11 +23,11 @@ static_resources:
                       routes:
                         - match: { prefix: "/" }
                           route:
-                            cluster: greeter_service # name of the service, you can see it in the bottom of thi file
+                            cluster: recommend_service # name of the service, you can see it in the bottom of thi file
                             max_stream_duration:
                               grpc_timeout_header_max: 0s
                       cors:
-                        allow_origin_string_match:
+                        allow_origin_string_match:s
                           - prefix: "*"
                         allow_methods: GET, PUT, DELETE, POST, OPTIONS
                         allow_headers: keep-alive,user-agent,cache-control,content-type,content-transfer-encoding,custom-header-1,x-accept-content-transfer-encoding,x-accept-response-streaming,x-user-agent,x-grpc-web,grpc-timeout
@@ -44,7 +44,7 @@ static_resources:
       http2_protocol_options: {}
       lb_policy: round_robin
       load_assignment:
-        cluster_name: greeter_service
+        cluster_name: recommend_service
         endpoints:
           - lb_endpoints:
               - endpoint:
