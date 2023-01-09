@@ -3,7 +3,7 @@ FROM gradle:jdk8 AS BUILD_STAGE
 ENV APP_HOME=/usr/app/
 WORKDIR $APP_HOME
 COPY . .
-RUN gradle build || return 1
+RUN gradle build
 
 # Package stage
 FROM openjdk:8-jre-slim
