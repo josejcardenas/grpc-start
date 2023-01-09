@@ -78,3 +78,34 @@ npm start
 In order to run the react application you need to start envoy
 Using docker
 docker-compose up and it creates the envoy and python application in two images that run together. 
+
+Creating for java. Code base on ./java folder
+
+The example is using gradle no maven. So a gradle project was created
+
+Go to dependencies on build.gradle and add
+    // these are the dependecies related to grpc
+    implementation 'io.grpc:grpc-netty-shaded:1.40.1'
+    implementation 'io.grpc:grpc-protobuf:1.40.1'
+    implementation 'io.grpc:grpc-stub:1.40.1'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+
+In order to create the java source based on proto file go where the proto file is defined and execute
+protoc -I="./" --plugin=protoc-gen-grpc-java=D:\protoc-3.18\bin\protoc-gen-grpc-java.exe --grpc-java_out="./../java/src/main/java" --java_out="./../java/src/main/java" "./recommendations.proto"
+
+It didn't work so I went to url below:
+https://intuting.medium.com/implement-grpc-service-using-java-gradle-7a54258b60b8
+create folder and file as explained in the video
+src/main/proto/recommendations.proto
+Change the proto file to add a java package
+package org.proto;
+
+I've applied a some changes to the build.gradle file in order to match the current installed tools
+def grpcVersion = '1.40.1'
+compile group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.18.0'
+
+Then gradle build and the files were generated on
+generated/source/proto/main in grpc and java respectively
+
+To use the previous code create a package in src/main/java and create the Service and Serve as below.
+Service

@@ -16,3 +16,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "50051:50051"
+  
+  grpc-java-server:
+    image: grpc-java-server
+    build:
+      context: ./java
+      dockerfile: Dockerfile
+    ports:
+      - "50051:50051"

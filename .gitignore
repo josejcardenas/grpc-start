@@ -80,8 +80,7 @@ target/
 # Mac OS-specific storage files
 .DS_Store
 
-
-# dependencies
+# react dependencies
 react-grpc/node_modules
 react-grpc/.pnp
 react-grpc/.pnp.js
@@ -104,3 +103,7 @@ react-grpc/yarn-debug.log*
 react-grpc/yarn-error.log*
 
 react-grpc/package-lock.json
+
+# gradle in java folder 
+java/.gradle/
+java/gradlew*
