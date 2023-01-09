@@ -53,21 +53,21 @@ dependencies {
 
 apply plugin: 'idea'
 
-protobuf {
-    generatedFilesBaseDir = "$projectDir/src/main/java/"
-    
-    protoc {
-        artifact = 'com.google.protobuf:protoc:3.18.0'
-    }
-
-    plugins {
-        grpc {
-            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
-        }
-    }
-    generateProtoTasks {
-        all()*.plugins {
-            grpc {}
-        }
-    }
-}
+// protobuf {
+//     generatedFilesBaseDir = "$projectDir/src/main/java/"
+//
+//     protoc {
+//         artifact = 'com.google.protobuf:protoc:3.18.0'
+//     }
+//
+//     plugins {
+//         grpc {
+//             artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
+//         }
+//     }
+//     generateProtoTasks {
+//         all()*.plugins {
+//             grpc {}
+//         }
+//     }
+// }
