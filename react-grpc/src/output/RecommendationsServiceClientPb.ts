@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for 
+ * @fileoverview gRPC-Web generated client stub for org.proto
  * @enhanceable
  * @public
  */
@@ -40,7 +40,7 @@ export class RecommendationsClient {
   }
 
   methodDescriptorRecommend = new grpcWeb.MethodDescriptor(
-    '/Recommendations/Recommend',
+    '/org.proto.Recommendations/Recommend',
     grpcWeb.MethodType.UNARY,
     recommendations_pb.RecommendationRequest,
     recommendations_pb.RecommendationResponse,
@@ -68,7 +68,7 @@ export class RecommendationsClient {
     if (callback !== undefined) {
       return this.client_.rpcCall(
         this.hostname_ +
-          '/Recommendations/Recommend',
+          '/org.proto.Recommendations/Recommend',
         request,
         metadata || {},
         this.methodDescriptorRecommend,
@@ -76,7 +76,7 @@ export class RecommendationsClient {
     }
     return this.client_.unaryCall(
     this.hostname_ +
-      '/Recommendations/Recommend',
+      '/org.proto.Recommendations/Recommend',
     request,
     metadata || {},
     this.methodDescriptorRecommend);

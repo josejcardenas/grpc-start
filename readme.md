@@ -109,3 +109,5 @@ generated/source/proto/main in grpc and java respectively
 
 To use the previous code create a package in src/main/java and create the Service and Serve as below.
 Service
+
+For Java I modified the proto file adding the package. So I have to update the proto file used for the react generation and regenerate again the grpc java scripts. Once that one is done I could call properly the API from react. 
