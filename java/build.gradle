@@ -53,7 +53,7 @@ dependencies {
 // apply plugin: 'idea'
 
 protobuf {
-    generatedFilesBaseDir = "$projectDir/src/main/java/"
+    generatedFilesBaseDir = "$projectDir/build/generated/source/"
 
     protoc {
         artifact = "com.google.protobuf:protoc:${protobufVersion}"
